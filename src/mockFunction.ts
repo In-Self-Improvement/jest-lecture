@@ -1,0 +1,5 @@
+export const obj = {
+  minus: (a: number, b: number): number => {
+    return a - b;
+  },
+};
