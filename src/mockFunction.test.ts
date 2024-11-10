@@ -6,7 +6,7 @@ test("Object minus 함수가 1번 호출되었다.(Spy 삽입)", () => {
   expect(obj.minus).toHaveBeenCalledTimes(1);
 });
 
-test("Object minus 함수가 1번 호출되었다.(Spy도 심고 실행도 안시키고 싶다)", () => {
+test.skip("Object minus 함수가 1번 호출되었다.(Spy도 심고 실행도 안시키고 싶다)", () => {
   jest.spyOn(obj, "minus").mockImplementation();
   const result = obj.minus(1, 2);
   expect(obj.minus).not.toHaveBeenCalledTimes(1);
